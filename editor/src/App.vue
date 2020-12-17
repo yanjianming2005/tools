@@ -35,6 +35,7 @@ export default {
         this.$message.error("请不要重复转换");
         return;
       }
+      code = code.replace(/<p>\s*<\/p>/ig,'');
       code = code.replace(
         /x-small|small|medium|large|x-large|xx-large/g,
         function(size) {
